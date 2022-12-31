@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#C2FFF9"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="356dp"
+        android:background="#2E4C6D">
+
+        <EditText
+            android:id="@+id/inputAngka2"
+            android:layout_width="127dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="52dp"
+            android:background="@android:drawable/editbox_background"
+            android:backgroundTint="#ECECEC"
+            android:ems="10"
+            android:inputType="number"
+            app:layout_constraintBottom_toTopOf="@+id/spinnerOperasi"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView3"
+            app:layout_constraintVertical_bias="0.45" />
+
+        <TextView
+            android:id="@+id/tandaOperator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="44dp"
+            android:layout_marginEnd="16dp"
+            android:text="+"
+            android:textColor="#ECECEC"
+            android:textSize="34sp"
+            app:layout_constraintEnd_toStartOf="@+id/inputAngka2"
+            app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+        <EditText
+            android:id="@+id/inputAngka1"
+            android:layout_width="124dp"
+            android:layout_height="50dp"
+            android:background="@android:drawable/editbox_background_normal"
+            android:backgroundTint="#ECECEC"
+            android:ems="10"
+            android:hapticFeedbackEnabled="false"
+            android:inputType="number"
+            app:layout_constraintBottom_toTopOf="@+id/spinnerOperasi"
+            app:layout_constraintEnd_toStartOf="@+id/tandaOperator"
+            app:layout_constraintHorizontal_bias="0.767"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView3"
+            app:layout_constraintVertical_bias="0.45" />
+
+        <TextView
+            android:layout_width="129dp"
+            android:layout_height="28dp"
+            android:text="Pilih Operasi :"
+            android:textAlignment="textStart"
+            android:textColor="#E8E8E8"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/spinnerOperasi"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.18"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/inputAngka1"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <Spinner
+            android:id="@+id/spinnerOperasi"
+            android:layout_width="307dp"
+            android:layout_height="52dp"
+            android:layout_marginTop="60dp"
+            android:background="@android:drawable/editbox_background_normal"
+            android:backgroundTint="#ECECEC"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tandaOperator" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#009DAE"
+            android:onClick="tombolEnter"
+            android:text="ENTER"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spinnerOperasi"
+            app:layout_constraintVertical_bias="0.38" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:text="KALKULATOR"
+            android:textColor="#ECECEC"
+            android:textSize="34sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="76dp"
+        android:background="#FC997C"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textHasil"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:paddingLeft="12dp"
+            android:paddingTop="8dp"
+            android:text="Hasil :"
+            android:textColor="#396EB0"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/iniHasil"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingRight="14dp"
+            android:textAlignment="textEnd"
+            android:textColor="#396EB0"
+            android:textSize="24sp" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/histori"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

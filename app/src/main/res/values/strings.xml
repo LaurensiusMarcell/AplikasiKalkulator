@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">AplikasiKalkulator</string>
+    <string name="shared_pref">iniSharedPref</string>
+    <string name="data_simpanan">iniDataSimpanan</string>
+</resources>
